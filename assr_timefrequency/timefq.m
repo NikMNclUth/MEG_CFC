@@ -28,7 +28,7 @@ function [IND,EV,PLF,TW,t2,fq2,X,TWC]=timefq(TS,fq,sr,width,dim, fixboundaries,l
 %output without need to recompute transformations. 
 %  [IND,EV,PLF,TW,t2,fq2,X,TWC]=timefq(TS,fq,sr,width,dim, fixboundaries,lowres_t, lowres_fq, lowres_kind,cfcwindow,t_erpdimmer)
 
-Nicola Polizotto (2020), UTHealth, Houston, Texas, USA
+%Nicola Polizotto (2020), UTHealth, Houston, Texas, USA
 
 if ~nargin
     help timefq
