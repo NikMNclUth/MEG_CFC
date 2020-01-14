@@ -29,6 +29,8 @@ function [ts,wavout,verts] = thresholdROI(data,filtlow,filthigh,blwind,wind,sr,f
 % verts = matrix of 1s and 0s corresponding to the vertices used in each
 % method
 
+% Nicholas Murphy (2020), Baylor College of Medicine, Houston, Texas, USA
+
 %% prepare data
 % filter
 
