@@ -10,6 +10,8 @@ function [X,BL]=baseline(X,bl,dim,method)
 %*if 'dim' is missing a default is used [the first matching dimension for
 %logical vectors,   the longest dimension for numerical indices].
 
+% Nicola Polizotto (2020), UTHealth, Houston, Texas, USA
+
 
 if  ~nargin
     help baseline
