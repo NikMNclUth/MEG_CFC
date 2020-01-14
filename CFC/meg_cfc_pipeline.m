@@ -16,6 +16,8 @@ function [] = meg_cfc_pipeline(contents,vertexfile,vertind,namepatternR,namepatt
 %savepath = where to save the data
 %surrs = number of surrogates to use
 
+% Nicholas Murphy (2020), Baylor College of Medicine, Houston, Texas, USA
+
 %% Function
 % load and process
 
