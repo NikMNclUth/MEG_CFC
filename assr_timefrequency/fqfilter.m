@@ -10,7 +10,7 @@ function [YF,t]=fqfilter(Y,f,sr,method,dim,order)
 %  'dim' codes time direction and overrides default   [longer dimension is time]
 %            [YF,t]=fqfilter(Y,f,sr,method,dim,order)
 
-Nicola Polizotto (2020), Baylor College of Medicine, Houston, Texas, USA
+% Nicola Polizotto (2020), UTHealth, Houston, Texas, USA
 
 
 if ~nargin
