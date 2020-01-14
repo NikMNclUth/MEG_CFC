@@ -156,3 +156,36 @@ verts = thresh;
 
 end
 
+function [zM] = aaftSurr(TS,surrs)
+xV=TS;
+n = length(xV);
+zM = NaN*ones(n,surrs);
+[oxV,T] = sort(xV);
+[~,ixV] = sort(T);
+for isur=1:surrs
+    % Rank order a white noise time series 'wV' to match the ranks of 'xV'
+    wV = randn(n,1) * std(xV);
+    [owV,~]= sort(wV);
+    yV = owV(ixV);
+    % Fourier transform, phase randomization, inverse Fourier transform
+    if rem(n,2) == 0
+        n2 = n/2;
+    else
+        n2 = (n-1)/2;
+    end
+    tmpV = fft(yV,2*n2);
+    magnV = abs(tmpV);
+    fiV = angle(tmpV);
+    rfiV = rand(n2-1,1)*2*pi;
+    nfiV = [0; rfiV; fiV(n2+1); -flipud(rfiV)];
+    tmpV = [magnV(1:n2+1)' flipud(magnV(2:n2))']';
+    tmpV = tmpV .* exp(nfiV .* 1i);
+    yftV=real(ifft(tmpV,n));  % Transform back to time domain
+    % Rank order the 'xV' to match the ranks of the phase randomized time series
+    [~,T2] = sort(yftV);
+    [~,iyftV] = sort(T2);
+    zM(:,isur) = oxV(iyftV);  % the AAFT surrogate of xV   
+end
+clear T2 iyftV yftV tmpV owV wV
+
+end
