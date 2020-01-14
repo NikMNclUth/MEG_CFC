@@ -1,5 +1,22 @@
 function [] = meg_cfc_pipeline(contents,vertexfile,vertind,namepatternR,namepatternL,datapath,amps,phases,wind,blwind,sr,entfrq,savepath,surrs)
 
+%% Inputs
+
+%contents = list of file names to load
+%vertexfile = matrix with logical indices of the vertices to use
+%vertind = column to use from vertexfile
+%namepatternR/L = loading parameter for picking particular files in mixed folder
+%datapath = path of the data
+%amps = vector of amplitude frequencies to use
+%phases = vector of phase frequencies to use
+%wind = window to estimate pac
+%blwind = window to estimate baseline pac
+%sr = sampling rate
+%entfrq = entrainment frequency (e.g. ASSR 40 Hz = 40)
+%savepath = where to save the data
+%surrs = number of surrogates to use
+
+%% Function
 % load and process
 
 for iter = 1:length(contents)
