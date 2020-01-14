@@ -13,7 +13,7 @@ function Y=wavtransform(TS,fq,sr,width,dim)
 %                                                                                                                                  NRP  12/2/2011
 %              Y=wavtransform(TS,fq,sr,width,dim)
 
-% Nicola Polizotto (2020), Baylor College of Medicine, Houston, Texas, USA
+% Nicola Polizotto (2020), UTHealth, Houston, Texas, USA
 
 
 
