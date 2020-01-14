@@ -1,4 +1,5 @@
 function [smData,amp2,pha2] = smoothcomod(amps,phases,data)
+% Nicholas Murphy (2020), Baylor College of Medicine, Houston, Texas, USA
 
 if numel(size(data))==3
     [X,Y] = meshgrid(1:size(mean(data,3),2), 1:size(mean(data,3),1));
